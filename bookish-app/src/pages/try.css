@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Petemoss&display=swap");
+
+* {
+	/* box-sizing: border-box; */
+	font-family: "Cinzel", serif;
+	color: rgb(0, 0, 0);
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	/* background-color: #915454; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+main {
+	display: flex;
+    height: 0px;
+	/* justify-content: center; */
+	/* background-color: #d9d9d9; */
+    /* padding-left: 50px; */
+}
+
+.book {
+	--book-height:600px;
+	--book-ratio: 1.4;
+}
+
+.book > div {
+	height: var(--book-height);
+	width: calc(var(--book-height) / var(--book-ratio));
+	overflow: auto;
+	background-color: #915454;
+	transform: scale(0.9);
+	border-radius: 6px;
+	transform-origin: left;
+}
+
+.book-cover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 9;
+	text-align: center;
+	/* background: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+		linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+		linear-gradient(315deg, black 25%, transparent 25%),
+		linear-gradient(45deg, black 25%, transparent 25%); */
+	/* background-size: 2em 2em; */
+	background-image: url('https://wallpaperaccess.com/full/4615845.jpg');
+	background-size: 100% 600px; /* Adjust the height by changing the second value (in this case, 80%) */
+	/* background-repeat: no-repeat; */
+	/* background-size: cover; */
+	color: rgb(19, 20, 20);
+	border-radius: 6px;
+
+	transition: transform 2s;
+}
+
+.book-cover::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	right: 20px;
+	top: 0;
+	bottom: 0;
+	/* background-color: #b11509; */
+}
+
+.chops{
+	background-image: linear-gradient(180deg,
+        rgba(99,253,136,1) 0%,
+        rgba(51,197,142,1) 50%,
+        rgba(39,97,116,1) 100%);
+}
+.track-my-reading{
+	font-family: "Petemoss", cursive;
+	font-size: 98px;
+	font-weight: 300;
+	color: rgb(118, 116, 70);
+}
+
+h2 {
+	font-size: 16px;
+}
+
+
+.separator {
+	--separator-size: 8px;
+	width: var(--separator-size);
+	height: var(--separator-size);
+	background-color: #dbd75d;
+	margin: 50px auto 60px auto;
+	border-radius: 50%;
+	position: relative;
+}
+
+.separator::after,
+.separator::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	background-color: rgb(209, 108, 108);
+	height: 2px;
+	top: calc(50% - 1px);
+}
+
+.separator::after {
+	left: 15px;
+}
+
+.separator::before {
+	right: 15px;
+}
+
+.book-content {
+	transform: scale(0.9) translateY(30px);
+	background-color: rgb(213, 205, 194) !important;
+	transition: all 0.3s 1s;
+	width: 200px;
+}
+
+.book-content h3,
+.book-content p {
+	opacity: 0;
+	transition: all 0.3s 0.3s;
+	border-radius: 6px;
+
+}
+
+h3 {
+	padding: 30px;
+}
+
+p {
+	padding: 0px 30px 10px 30px;
+	text-align: justify;
+	font-size: 14px;
+}
+
+.book-cover > div {
+	transition: opacity 0s 0.6s;
+}
+
+.book:hover > .book-cover {
+	transform: rotateY(180deg) scale(0.9);
+}
+
+.book:hover > .book-cover > div {
+	opacity: 0;
+}
+
+.book:hover > .book-content {
+	transform: scale(0.9) translateY(0px);
+}
+
+.book:hover > .book-content h3,
+.book:hover > .book-content p {
+	opacity: 1;
+}
+.bookinput{
+    padding: 20px;
+}
+
+.icon-button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	color: #333333;
+	background: #dddddd;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+  }
+  
+  .icon-button:hover {
+	cursor: pointer;
+  }
+  
+  .icon-button {
+	background: #deebd9;
+  }
+  
+  .icon-button__badge {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 25px;
+	height: 25px;
+	background: rgb(186, 84, 84);
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+  }
+
+  .filled-star {
+	color: #ffd700; /* Yellow color for filled stars */
+  }
+  
+  .empty-star {
+	color: #ccc; /* Gray color for empty stars */
+  }
+  

@@ -1,0 +1,11 @@
+1. make collection in mongo db
+2. create backend folder - npm  init -y
+3. install express - npm i express
+4. connect frontend and backend ports - npm i cors
+5. create index.js and write code in it
+6. create folder in be called services and in it a file- db.js (to describe db connections and  logic)
+7. isntall mongoose lib- npm i mongoose (connects node and mongodb) 
+8. code in db.js
+9. in services create - logic.js
+10. make onclick to register users in register.jsx
+11. install axios import in register.js and write code
